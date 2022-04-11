@@ -7,7 +7,7 @@
     "test": "jest",
     "watch": "nodemon"
   },
-  "author": "Sergio Álvarez <sergio@codecoolture.com>",
+  "author": "Sergio Álvarez <hola@codecoolture.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/express": "4.17.13",
