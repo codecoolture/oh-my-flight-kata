@@ -2,7 +2,7 @@
 
 We need to create a service that pulls flights information from a 3rd party service and stores it for later consumption. This service will provide a REST-like API with the following two endpoints:
 
-- `POST /_/sync?start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>`: performs a call to a 3rd party service and saves the information in the database. We don't control when this endpoint is called. There is a scheduled process that performs requests every X minutes. The response is a JSON document with the results.
+- `POST /_/sync?start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>`: performs a call to a 3rd party service and saves the information in the database. We don't control when this endpoint is called (but we may expect a scheduled process performing requests every few minutes). The response is a JSON document with the sync results.
 
 ```json
 {
