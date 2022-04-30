@@ -2,7 +2,7 @@
 
 We need to create a service that pulls flights information from a 3rd party service and stores it for later consumption. This service will provide a REST-like API with the following two endpoints:
 
-- `POST /_/sync?start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>`: performs a call to the 3rd party service and save the information in the database. We won't control when this endpoint will be called, but we know there will be some kind of scheduled process that will perform requests every X minutes. This endpoint will respond with a simple JSON report with the results.
+- `POST /_/sync?start_date=<YYYY-MM-DD>&end_date=<YYYY-MM-DD>`: performs a call to a 3rd party service and saves the information in the database. We don't control when this endpoint is called. There is a scheduled process that performs requests every X minutes. The response is a JSON document with the results.
 
 ```json
 {
@@ -23,13 +23,13 @@ We need to create a service that pulls flights information from a 3rd party serv
 }
 ```
 
-- `GET /flights`: returns the collection of flights in the database. It has to support the following filters:
+- `GET /flights`: returns the collection of flights in the database. It supports the following filters:
 
   - `max_price=<number>`: returns the flights with price less or equal than `<number>`.
   - `to=<location>`: returns the flights landing at `<location>`.
   - `from=<location>`: returns the flights departing from `<location>`.
 
-  The response from this endpoint should comply with the following schema:
+  The responses from this endpoint comply with the following schema:
 
   ```json
   {
