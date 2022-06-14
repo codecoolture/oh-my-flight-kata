@@ -1,4 +1,19 @@
-# OhMyFlight Kata
+<h1 align="center">
+  OhMyFlight ✈️ Kata
+</h1>
+
+<div align="center">
+  <img src="./.github/tddworkshop.png" width="600" align="center">
+
+  <p>
+    Hire
+    <strong><a href="https://tddworkshop.com" target="blank">The TDD Workshop</a></strong>
+    by
+    <strong><a href="https://codecoolture.com" target="">Codecoolture</a></strong>.
+  </p>
+</div>
+
+## The exercise
 
 We need to create a service that pulls flights information from a 3rd party service and stores it for later consumption. This service will provide a REST-like API with the following two endpoints:
 
